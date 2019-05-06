@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: niadakexpressaks 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: niadakexpressaks 
+    spec:
+      containers:
+        - name: niadakexpressaks 
+          image: niadak01.azurecr.io/niadakexpressaks 
+          ports:
+          - containerPort: 3000
